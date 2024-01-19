@@ -1,0 +1,83 @@
+* {box-sizing: border-box;}
+
+@font-face {
+    font-family: 'TT Travels';
+    src: url('../font/TTTravels-ExtraBoldItalic.eot');
+    src: url('../font/TTTravels-ExtraBoldItalic.eot?iefix') format('eot'),
+    url('../font/TTTravels-ExtraBoldItalic.woff') format('woff'),
+    url('../font/TTTravels-ExtraBoldItalic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'TT Travels italic';
+	src: url('../font/TTTravels-Italic.eot');
+	src: url('../font/TTTravels-Italic.eot?iefix') format('eot'),
+	url('../font/TTTravels-Italic.woff') format('woff'),
+	url('../font/TTTravels-Italic.ttf') format('truetype')
+} 
+
+body { 
+	background-color: #121a40;
+	margin: 0;
+	font-family: "TT Travels";
+  }
+  
+.header {
+	overflow: hidden;
+	padding: 100px 300px;
+}
+  
+.header a {
+	float: left;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	line-height: 25px;
+	border-radius: 4px;
+}
+  
+.header a.logo {
+	font-size: 90px;
+}
+  
+.header a:hover {
+	color: rgb(112, 112, 112);
+}
+  
+.header a.active {
+	background-color: dodgerblue;
+	color: white;
+}
+  
+.header-right {
+	float: right;
+}
+
+.navigation {
+	font-size: 26px;
+	padding: 0 150px;
+}
+  
+.title {
+	width: 1300px;
+	color: white;
+}
+
+.title-left {
+	padding: 150px 300px;
+	letter-spacing: 3px;
+	line-height: 45px;
+}
+
+.text {
+	margin-bottom: 220px;
+	font-size: 30px;
+}
+
+.Slider {
+	width: 300px;
+	height: 300px;
+}
+
