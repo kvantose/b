@@ -1,72 +1,62 @@
-import './App.css'
-import React, { useState, useEffect } from 'react'
-import Button from '@mui/material/Button';
-import ImageGallery from "react-image-gallery";
+import { useEffect, useState } from "react";
+import "./App.css";
+import Header from "./components/Header/Header.jsx";
+import { Route, Routes, useLocation, useNavigation } from "react-router-dom";
+import Button from "./components/Buttons/Button";
+import { useNavigate } from "react-router-dom";
+import Intro from "./components/Intro/Intro.jsx";
+import About from "./components/About/About.jsx";
+import Contacts from "./components/Contacts/Contacts.jsx";
+import CheckboxLabels from "./components/Buy/CheckBoxHandler.jsx";
 
+export default function App() {
+  const [tab, setTab] = useState("");
+  const navigate = useNavigate();
+  const location = useLocation();
 
+  useEffect(() => {
+    if (location.pathname !== "/") {
+      setTab(location.pathname.trimStart("/"));
+    }
+  }, []);
 
-function Title() {
+  useEffect(() => {
+    navigate(tab);
+  }, [tab]);
+
   return (
     <>
-      <div className="header">
-        <a href="#default" class="logo">ДСТ</a>
-        <div className="header-right">
-          <a href="#contact" className='navigation'>Контакт</a>
-          <a href="#about" className='navigation'>О нас</a>
-          <a href="#order" className='navigation'>Купить</a>
-        </div>
-      </div>
+      <header>
+        <Header />
+      </header>
+      <main>
+        <div className="main-container">
+        <Routes>
+          <Route path="/" element={<Intro />} />
+          <Route path="about" element={<About />} />
+          <Route path="contacts" element={<Contacts />} />
+          <Route path="buy" element={<CheckboxLabels />} />
+        </Routes>
 
-      <div className='title'>
-        <div className='title-left'>
-          <p className='text'>Мы - профессионалы в сфере доставки
-          рыбы и морепродуктов по всей России.
-          Независимо от того, в каком регионе вы находитесь,
-          мы обеспечим быструю и надежную доставку прямо к вашей двери.</p>
-          
-          <Button variant="outlined"
-          sx={{color: "white", fontSize: "28px", fontFamily: "TT Travels",
-          border: "3px solid white", width: "700px", height: "100px"}}>
-          Оставить заявку</Button>
+        <div className="buttons-grid">
+          <Button inActive={tab == ""} onClick={() => setTab("")}>
+            Главная
+          </Button>
+          <Button inActive={tab == "about"} onClick={() => setTab("about")}>
+            О нас
+          </Button>
+          <Button
+            inActive={tab == "contacts"}
+            onClick={() => setTab("contacts")}
+          >
+            Контакты
+          </Button>
+          <Button inActive={tab == "buy"} onClick={() => setTab("buy")}>
+            Купить
+          </Button>
         </div>
-        <div className='slider'></div>
-      </div>
+        </div>
+      </main>
     </>
   );
 }
-
-
-  const images = [
-    {
-      original: "img/1.png",
-      thumbnail: "img/1.png",
-    },
-    {
-      original: "img/2.png",
-      thumbnail: "img/2.png",
-    },
-    {
-      original: "img/3.png",
-      thumbnail: "img/3.png",
-    },
-  ];
-
-function Slider() {
-  return (
-    <ImageGallery items={images} sx={{width: "100px", height: "100px"}} />
-  )
-}
-
-
-
-const App = () => {
-  return (
-    <div>
-      <Title />
-      <Slider />
-    </div>
-  );
-};
-
-
-export default App;

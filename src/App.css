@@ -1,5 +1,13 @@
 * {box-sizing: border-box;}
 
+#root {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+    flex-direction: column;
+	overflow-x: hidden;
+}
+
 @font-face {
     font-family: 'TT Travels';
     src: url('../font/TTTravels-ExtraBoldItalic.eot');
@@ -18,66 +26,40 @@
 	url('../font/TTTravels-Italic.ttf') format('truetype')
 } 
 
-body { 
-	background-color: #121a40;
-	margin: 0;
-	font-family: "TT Travels";
-  }
-  
-.header {
-	overflow: hidden;
-	padding: 100px 300px;
-}
-  
-.header a {
-	float: left;
-	color: white;
+header {
 	text-align: center;
-	text-decoration: none;
-	line-height: 25px;
-	border-radius: 4px;
+	margin-top: 3rem;
 }
-  
-.header a.logo {
-	font-size: 90px;
-}
-  
-.header a:hover {
-	color: rgb(112, 112, 112);
-}
-  
-.header a.active {
-	background-color: dodgerblue;
+
+body {
+	background-color: #121a40;
+	font-family: "TT Travels";
 	color: white;
-}
-  
-.header-right {
-	float: right;
+	margin: 0;
+	overflow-x: hidden;
 }
 
-.navigation {
-	font-size: 26px;
-	padding: 0 150px;
-}
-  
-.title {
-	width: 1300px;
-	color: white;
-}
-
-.title-left {
-	padding: 150px 300px;
-	letter-spacing: 3px;
-	line-height: 45px;
+.buttons-grid{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:2rem;
+	padding: 2rem 3rem;
+	width: max-content;
 }
 
-.text {
-	margin-bottom: 220px;
-	font-size: 30px;
+.main-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem;
+	height: 100%;
+	width: 100%;
 }
 
-.Slider {
-	width: 300px;
-	height: 300px;
+main {
+	height: 100%;
+	width: 100%;
+	overflow-x: hidden;
 }
-

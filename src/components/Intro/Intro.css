@@ -1,0 +1,13 @@
+.title {
+	margin: 8rem 10rem;
+}
+
+.title-left {
+	width: 770px;
+}
+
+.text {
+	line-height: 60px;
+	letter-spacing: 5px;
+	font-size: 30px;
+}

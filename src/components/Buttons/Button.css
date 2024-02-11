@@ -1,0 +1,15 @@
+.btn-outline {
+    /* margin-left: 10rem; */
+    /* margin-right: 8rem; */
+    /* float: left; */
+    align-content: center;
+
+}
+
+.btn-active {
+    box-shadow: 0 0 0 4px #121a40;
+    background-color: rgb(44, 115, 221) !important;
+}
+
+
+
