@@ -73,7 +73,7 @@ export default function CheckboxLabels() {
           );
         })}
       </FormGroup>
-      <ButtonBuy />
+      <ButtonBuy selectedItems={selectedItems} />
     </div>
   );
 }

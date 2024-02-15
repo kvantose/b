@@ -1,16 +1,17 @@
 import Button from "@mui/material/Button";
 import CloseIcon from "@mui/icons-material/Close";
-import selectItems from "../Buy/CheckBoxHandler";
 import Modal from "./Modal";
-import { useState } from "react";
+import {useEffect, useState} from "react";
 import ModalFeedBack from "./ModalFeedBack";
 
-export default function ButtonBuy() {
+export default function ButtonBuy({selectedItems}) {
   const [modal, setModal] = useState(false);
   
   const openModal = () => {
     setModal(true);
   };
+
+  useEffect(()=>console.log(selectedItems), [selectedItems])
 
   return (
     <>
