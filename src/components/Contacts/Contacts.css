@@ -14,6 +14,7 @@
 }
 
 .container-inside {
+	padding-left:300px;
 	margin: 50px 0;
 }
 
@@ -48,6 +49,7 @@
 	}
 
 	.container-inside {
+		padding: 0;
 		margin: 0;
 	}
 }
@@ -58,3 +60,12 @@
 	justify-content: space-evenly;
 }
 
+@media screen and (max-width: 600px) {
+	.container-info {
+		font-size: 20px;
+	}
+	
+	.content {
+		padding: 15px;
+	}
+}

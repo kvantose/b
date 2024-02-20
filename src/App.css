@@ -63,3 +63,29 @@ main {
 	width: 100%;
 	overflow-x: hidden;
 }
+
+
+@media screen and (max-width: 1400px) {
+	.buttons-grid {
+		grid-template-columns: 1fr 1fr;
+		gap: 2rem 10rem;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.buttons-grid {
+		grid-template-columns: 1fr 1fr;
+		gap: 2rem 6rem;
+		padding: 1rem;	
+	}
+	
+}
+
+@media screen and (max-width: 400px) {
+	.buttons-grid {
+		grid-template-columns: 1fr 1fr;
+		gap: 1rem;
+		padding: 1rem;	
+	}
+	
+}

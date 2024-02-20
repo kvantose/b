@@ -15,6 +15,16 @@ export default function ButtonSection({ children, onClick, inActive }) {
           border: "3px solid white",
           width: "300px",
           height: "70px",
+          "@media screen and (max-width: 900px)": {
+            width: "200px",
+            height: "50px",
+            fontSize: "20px",
+          },
+          "@media screen and (max-width: 600px)": {
+            width: "150px",
+            height: "40px",
+            fontSize: "16px",
+          }, 
         }}
       >
         {children}

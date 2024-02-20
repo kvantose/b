@@ -20,23 +20,34 @@ export default function ButtonBuy({selectedItems}) {
         variant="contained"
         color="success"
         sx={{
-          width: "300px",
-          height: "70px",
-          fontSize: "20px",
+          margin: "30px 0px 30px 0px",
+          width: "400px",
+          height: "100px",
+          fontSize: "28px",
           fontFamily: "TT Travels",
-          border: "3px solid white",
-        }}
+          "@media screen and (max-width: 900px)": {
+            width: "200px",
+            height: "50px",
+            fontSize: "18px",
+          },
+          "@media screen and (max-width: 600px)": {
+            width: "150px",
+            height: "40px",
+            fontSize: "14px",
+          }, 
+      }}
       >
-        Узнать наличие
+        Узнать о наличии
       </Button>
 
       <Modal open={modal}>
         <CloseIcon
+          sx={{}}
           className="close-btn"
           cursor="pointer"
           onClick={() => setModal(false)}
         />
-        <ModalFeedBack />
+        <ModalFeedBack selectedItems={selectedItems}/>
       </Modal>
     </>
   );

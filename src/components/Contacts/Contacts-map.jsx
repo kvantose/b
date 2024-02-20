@@ -12,7 +12,7 @@ export default function ContactsMain() {
             controls: ["zoomControl", "fullscreenControl"],
           }}
           modules={["control.ZoomControl", "control.FullscreenControl"]}
-          width='62vw'
+          width='80vw'
           height='500px'
         >
           <Placemark defaultGeometry={[59.925371, 30.34986]} />

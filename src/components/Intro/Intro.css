@@ -11,3 +11,43 @@
 	letter-spacing: 5px;
 	font-size: 30px;
 }
+
+@media screen and 	(max-width: 900px) {
+	.title {
+		margin: 2rem;
+	}
+
+	.title-left {
+		width: 600px;
+	}
+
+	.text {
+		line-height: 50px;
+		letter-spacing: 4px 	;
+		font-size: 24px;
+	}
+}
+
+@media screen and 	(max-width: 600px) {
+	.title-left {
+		width: 400px;
+	}
+	.text {
+		line-height: 40px;
+		letter-spacing: 3px;
+		font-size: 20px;
+	}
+	
+}
+
+@media screen and 	(max-width: 400px) {
+	.title-left {
+		width: 300px;
+	}
+	.text {
+		line-height: 30px;
+		letter-spacing: 2px;
+		font-size: 16px;
+	}
+	
+}
