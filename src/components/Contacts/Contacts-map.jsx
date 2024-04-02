@@ -3,8 +3,8 @@ import "./Contacts.css";
 
 export default function ContactsMain() {
   return (
-    <YMaps>
-      <div className="map">
+    <div className="map">
+      <YMaps>
         <Map
           defaultState={{
             center: [59.925371, 30.34986],
@@ -12,12 +12,12 @@ export default function ContactsMain() {
             controls: ["zoomControl", "fullscreenControl"],
           }}
           modules={["control.ZoomControl", "control.FullscreenControl"]}
-          width='80vw'
-          height='500px'
+          width="60vw"
+          height="500px"
         >
           <Placemark defaultGeometry={[59.925371, 30.34986]} />
         </Map>
-      </div>
-    </YMaps>
+      </YMaps>
+    </div>
   );
 }

@@ -1,0 +1,21 @@
+.modal-input {
+    font-family: "TT Travels italic";
+    margin: 20px 0px;   
+    font-size: 20px; 
+    border: none;
+    border-bottom: 1px solid black;  
+}
+.modal-input-question {
+    font-family: "TT Travels italic";
+    margin: 20px 0px;
+    font-size: 20px;
+    resize: none;
+}
+.modal-input:active,
+.modal-input:focus {
+    outline: none;
+}
+.modal-input-question:active,
+.modal-input-question:focus {
+    outline: none;
+}

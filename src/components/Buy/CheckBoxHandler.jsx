@@ -9,10 +9,6 @@ import ButtonBuy from "./ButtonBuy";
 export default function CheckboxLabels() {
   const [selectedItems, setSelectedItems] = useState([]);
 
-  useEffect(() => {
-    console.log(selectedItems);
-  }, [selectedItems]);
-
   return (
     <>
       <div className="checkbox-container">
@@ -23,14 +19,13 @@ export default function CheckboxLabels() {
             height: "100%",
             display: "flex",
             flexDirection: "column",
-            flexWrap: "wrap",
-            "@media screen and (max-width: 1350px)": {
+            flexWrap: "wrap", // не работает???
+            "@media screen and (max-width: 1450px)": {
               fontSize: "16px",
             },
             "@media screen and (max-width: 750px)": {
-              width: "50%",
               flexWrap: "nowrap",
-            }
+            },
           }}
         >
           {text.map(({ title, items }, index) => {
@@ -43,6 +38,7 @@ export default function CheckboxLabels() {
                   return (
                     <>
                       <FormControlLabel
+                        key={index + "_" + itemIndex}
                         sx={{
                           width: "max-content",
                           padding: "3px",
@@ -51,7 +47,6 @@ export default function CheckboxLabels() {
                             margin: "0",
                           },
                         }}
-                        key={index + "_" + itemIndex}
                         label={
                           <label
                             className="label-checkbox"
@@ -62,13 +57,15 @@ export default function CheckboxLabels() {
                         }
                         control={
                           <Checkbox
+                            key={index + "_" + itemIndex}
                             id={"chk_" + index + "_" + itemIndex}
                             sx={{
                               padding: "10px",
+                              color: "grey",
                               "& .MuiSvgIcon-root": { fontSize: "20px" },
                               "@media screen and (max-width: 1350px)": {
                                 padding: "6.5px",
-                              }
+                              },
                             }}
                             onChange={(e) => {
                               if (e.target.checked) {

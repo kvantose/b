@@ -11,8 +11,6 @@ export default function ButtonBuy({selectedItems}) {
     setModal(true);
   };
 
-  useEffect(()=>console.log(selectedItems), [selectedItems])
-
   return (
     <>
       <Button

@@ -8,6 +8,7 @@ import Intro from "./components/Intro/Intro.jsx";
 import About from "./components/About/About.jsx";
 import Contacts from "./components/Contacts/Contacts.jsx";
 import CheckboxLabels from "./components/Buy/CheckBoxHandler.jsx";
+import Error from "./components/Error/Error.jsx";
 
 export default function App() {
   const [tab, setTab] = useState("");
@@ -23,6 +24,7 @@ export default function App() {
   useEffect(() => {
     navigate(tab);
   }, [tab]);
+  
 
   return (
     <>
@@ -36,6 +38,7 @@ export default function App() {
           <Route path="about" element={<About />} />
           <Route path="contacts" element={<Contacts />} />
           <Route path="buy" element={<CheckboxLabels />} />
+          <Route path="error" element={<Error /> }/>
         </Routes>
 
         <div className="buttons-grid">

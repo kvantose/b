@@ -25,6 +25,10 @@
 	color: white;
 }
 
+.map {
+	margin-right: 10%;
+}
+
 @media screen and (max-width: 1450px) {
 	.contacts-container {
 		flex-direction: column !important;
